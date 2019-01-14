@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "declaration": true,
+        "inlineSourceMap": true,
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "es2017",
+            "esnext",
+            "esnext.asynciterable"
+        ],
+        "module": "commonjs",
+        "newLine": "lf",
+        "noUnusedLocals": true,
+        "outDir": "dist",
+        "removeComments": true,
+        "strict": true,
+        "target": "esnext"
+    },
+    "exclude": [
+        "dist",
+        "node_modules"
+    ],
+    "include": [
+        "src/**/*.ts",
+        "tests/**/*.ts"
+    ],
+    "references": [
+        { "path": "../hint" },
+        { "path": "../utils-tests-helpers" }
+    ],
+    "extends": "../../tsconfig.json"
+}

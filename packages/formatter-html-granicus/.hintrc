@@ -9,7 +9,7 @@
         "html-granicus",
         "summary"
     ],
-    "parsers": ["javascript", "css"],
+    "parsers": ["javascript"],
     "hintsTimeout": 120000,
     "hints": {
         "amp-validator": "off",
@@ -42,7 +42,6 @@
         "strict-transport-security": "warning",
         "stylesheet-limits": "warning",
         "validate-set-cookie-header": "warning",
-        "x-content-type-options": "warning",
-        "responsive": "warning"     
+        "x-content-type-options": "warning"
     }
 }

@@ -19,3 +19,7 @@ export type HintMetadata = {
     /** The scope of the hints (local, site, any) */
     scope: HintScope;
 };
+
+export interface MetadataDocsExtend extends MetadataDocs{
+    categoryName: string
+}

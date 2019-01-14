@@ -47,13 +47,13 @@ export class Connector implements IConnector {
     /** The default headers to do any request. */
     private _headers: HttpHeaders;
     /** The original URL to collect. */
-    private _href: string = '';
+    protected _href: string = '';
     /** The final URL after redirects (if they exist) */
-    private _finalHref: string = '';
+    protected _finalHref: string = '';
     /** The instance of hint that is using this connector. */
     private _server: Engine;
     /** The client to talk to the browser. */
-    private _client!: Crdp.CrdpClient;
+    protected _client!: Crdp.CrdpClient;
     /** A set of requests done by the connector to retrieve initial information more easily. */
     private _requests: Map<string, RequestResponse>;
     /** Indicates if there has been an error loading the page (e.g.: it doesn't exists). */
@@ -624,7 +624,7 @@ export class Connector implements IConnector {
     }
 
     /** Handler fired when page is loaded. */
-    private onLoadEventFired(callback: Function): Function {
+    public onLoadEventFired(callback: Function): Function {
         return async () => {
             try {
                 if (this._errorWithPage) {
