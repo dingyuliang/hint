@@ -25,7 +25,7 @@ export class CDPLauncher extends Launcher {
     private userDataDir: string | boolean;
     private chromeFlags: string[];
 
-    public constructor(options: LauncherOptions) {
+    public constructor(options: ChromeLauncherOptions) {
         const flags = options && options.flags || ['--no-default-browser-check'];
 
         /* istanbul ignore next */
@@ -33,7 +33,7 @@ export class CDPLauncher extends Launcher {
             flags.push('--headless', '--disable-gpu');
         } else if (process.env.DOCKER === 'true') { // eslint-disable-line no-process-env
             flags.push('--headless');
-        }else if(process.env.XVFB === 'true'){
+        }else if(options.xvfb == true || process.env.XVFB === 'true'){
             // see http://www.mattzeunert.com/2018/07/21/running-headful-chrome-on-ubuntu-server.html
             flags.push('--disable-gpu', '--no-sandbox', '--disable-setuid-sandbox');
         }
@@ -182,3 +182,8 @@ export class CDPLauncher extends Launcher {
         }
     }
 }
+
+
+export declare interface ChromeLauncherOptions extends LauncherOptions{
+    xvfb?: boolean;
+};

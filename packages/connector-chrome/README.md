@@ -65,7 +65,8 @@ The set of settings supported by Chrome connector are:
             "useTabUrl": false,
             "tabUrl": "https://empty.webhint.io/",
             "flags": ["--headless", "--disable-gpu"],
-            "waitForContentLoaded": 10000
+            "waitForContentLoaded": 10000,
+            "xvfb": false
         }
     },
     ...
@@ -80,7 +81,7 @@ sudo apt-get install xvfb
 ```
 2. Run 
 ```
-sudo XVFB=true xvfb-run node packages/hint/dist/src/bin/hint.js https://granicus.com
+sudo XVFB=true xvfb-run node packages/hint/dist/src/bin/hint.js https://empty.webhint.io/
 ```
 
 ## Further Reading
