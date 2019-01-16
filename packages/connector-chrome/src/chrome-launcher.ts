@@ -33,6 +33,8 @@ export class CDPLauncher extends Launcher {
             flags.push('--headless', '--disable-gpu');
         } else if (process.env.DOCKER === 'true') { // eslint-disable-line no-process-env
             flags.push('--headless');
+        }else if(process.env.XVFB === 'true'){
+            flags.push('--disable-gpu', '--no-sandbox', '--disable-setuid-sandbox');
         }
 
         super(Object.assign({}, options, { flags: Array.from(new Set(flags)) }));
