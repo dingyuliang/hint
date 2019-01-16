@@ -55,6 +55,7 @@
     "clean": "npm-run-all clean:*",
     "clean:packages": "rimraf \"packages/!(connector-edge|extension-vscode)/{dist,node_modules,npm-shrinkwrap.json,package-lock.json,yarn.lock}\"",
     "clean:root": "rimraf dist",
+    "hint": "node \"packages/hint/dist/src/bin/hint.js\"",
     "lint": "npm-run-all lint:*",
     "lint:md": "node scripts/lint-markdown",
     "lint:packages": "loop \"yarn lint\" --cwd packages --exclude configuration-development,configuration-progressive-web-apps,configuration-web-recommended",
