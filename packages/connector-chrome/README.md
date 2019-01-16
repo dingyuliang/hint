@@ -72,6 +72,16 @@ The set of settings supported by Chrome connector are:
 }
 ```
 
+## Running chrome connector in ubuntu with xvfb in headless mode
+1. Install xvfb
+```
+sudo apt-get install xvfb
+```
+2. Run 
+```
+sudo XVFB=true xvfb-run node packages/hint/dist/src/bin/hint.js https://granicus.com
+```
+
 ## Further Reading
 
 * [Connectors][connectors]
