@@ -72,7 +72,8 @@ The set of settings supported by Chrome connector are:
 }
 ```
 
-## Running chrome connector in ubuntu with xvfb in headless mode
+## Running chrome connector in ubuntu with xvfb in headless mode.
+xvfb allows run chrome in headless mode with extensions.
 1. Install xvfb
 ```
 sudo apt-get install xvfb

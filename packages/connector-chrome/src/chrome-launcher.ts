@@ -34,6 +34,7 @@ export class CDPLauncher extends Launcher {
         } else if (process.env.DOCKER === 'true') { // eslint-disable-line no-process-env
             flags.push('--headless');
         }else if(process.env.XVFB === 'true'){
+            // see http://www.mattzeunert.com/2018/07/21/running-headful-chrome-on-ubuntu-server.html
             flags.push('--disable-gpu', '--no-sandbox', '--disable-setuid-sandbox');
         }
 
